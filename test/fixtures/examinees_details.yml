@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  father_name: MyString
+  ssc_roll: 1.5
+  ssc_gpa: 1.5
+  hsc_roll: 1.5
+  hsc_gpa: 1.5
+  quota: 
+
+two:
+  name: MyString
+  father_name: MyString
+  ssc_roll: 1.5
+  ssc_gpa: 1.5
+  hsc_roll: 1.5
+  hsc_gpa: 1.5
+  quota: 
