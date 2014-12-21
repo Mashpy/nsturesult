@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  marks: 1.5
+  merit: 
+  list: MyString
+
+two:
+  marks: 1.5
+  merit: 
+  list: MyString

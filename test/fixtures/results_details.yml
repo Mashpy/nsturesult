@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  physics: 1.5
+  chemistry: 1.5
+  math: 1.5
+  biology: 1.5
+  ban_eng: 1.5
+  bangla: 1.5
+  english: 1.5
+  analytical_ability: 1.5
+  general_knowledge: 1.5
+
+two:
+  physics: 1.5
+  chemistry: 1.5
+  math: 1.5
+  biology: 1.5
+  ban_eng: 1.5
+  bangla: 1.5
+  english: 1.5
+  analytical_ability: 1.5
+  general_knowledge: 1.5
