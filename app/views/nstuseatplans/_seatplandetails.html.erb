@@ -1,15 +1,23 @@
-<h3 style="text-align:center">Admission Seat Plan has Published</h3>
+<h3 style="text-align:center">Admission Seat Plan has been Published</h3>
 <%= form_tag nstuseatplans_path, :method => 'get' do %>
 <div align="center">
+  <div style="color:red"><%= @notdigit %>  </div>
 Enter Admission Test Roll<br/>
 <%= text_field_tag :search, params[:search], class: "", placeholder: "Roll no.",:size=>50  %><br/>
 <%= submit_tag "Check", :class=>"btn-primary btn-success" ,:title => nil %>
 </div>  
 <% end %>
 
+<% if @seatplan.blank? %>
+<% else %>
 <% @seatplan.each do |details| %>
 <hr>
 <div class="row">  
+
+<div class="">
+<b>Roll:</b>
+<%= params[:search] %>
+</div>  
   
 <% if details.unit.blank? %>
 <% else %>
@@ -36,11 +44,12 @@ Enter Admission Test Roll<br/>
 </div>
 <% end %>    
 
-  <br/><b>Other Instuction</b><br/>
+  <br/><b>Other Instuctions:</b><br/>
 আবেদনকৃত শিক্ষার্থীকে ভর্তি পরীক্ষার দিন HSC বা সমমান এর মূল রেজিস্ট্রেশন কার্ডের দুই কপি সত্যায়িত ফটোকপি এবং দুই কপি রঙিন পাসপোর্ট সাইজের সত্যায়িত ছবি, ছবির পেছনে পরীক্ষার্থীর নাম, SMS এর মাধ্যমে প্রাপ্ত রোল নম্বর বাংলা ও ইংরেজিতে লিখে উক্ত ছবি দ্ইুটির প্রত্যকটিকে পৃথকভাবে ফটোকপিকৃত রেজিস্ট্রেশন কার্ডের বাম দিকে উপরে স্টাপলার পিন দিয়ে সংযুুক্ত করে অবশ্যই সঙ্গে নিয়ে আসতে হবে। এগুলো ছাড়া কেউই ভর্তি পরীক্ষায় অংশগ্রহণ করতে পারবে না। রেজিস্ট্রেশন কার্ডের ফটোকপির উপরের অংশে উক্ত রোল নম্বর বাংলা ও ইংরেজিতে লিখতে হবে। বিশ্ববিদ্যালয় কর্তৃপক্ষ পরীক্ষার হলে পরীক্ষার্থী কর্তৃক আনিত HSC বা সমমান পরীক্ষার ফটোকপিকৃত (সত্যায়িত) দুইটি রেজিস্ট্রেশন কার্ডের একটি শিক্ষার্থীকে প্রবেশ পত্র হিসেবে প্রদান করবে। অন্যটি পরীক্ষার হলে জমা রাখা হবে এবং বিশ্ববিদ্যালয় কর্তৃপক্ষ তা সংরক্ষণ করবে।  <br/>
 # ES সিরিজের Calculator আনা যাবে না।<br/>
 # ভর্তি পরীক্ষায় নেগেটিভ মার্কিং নেই।<br/>
 </div>
+<% end %>
 <% end %>
 
 </div> 
