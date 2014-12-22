@@ -1,0 +1,180 @@
+<%= form_tag nsturesults_path, :method => 'get' do %>
+<%= text_field_tag :search, params[:search], class: "", placeholder: "Roll no." %>
+<%= submit_tag "Check", :class=>"btn btn-primary btn-success" ,:title => nil %>
+<% end %>
+
+<% @examineesdetails.each do |details| %>
+
+<% if details.name.blank? %>
+<% else %>
+<p>
+<strong>Name: </strong>
+<%= details.name %>
+</p>
+<% end %>
+
+<% if details.father_name.blank? %>
+<% else %>
+<p>
+<strong>Father's Name: </strong>
+<%= details.father_name %>
+</p>
+<% end %>
+
+<% if details.ssc_roll.blank? %>
+<% else %>
+<p>
+<strong>SSC Roll: </strong>
+<%= details.ssc_roll %>
+</p>
+<% end %>
+
+<% if details.ssc_gpa.blank? %>
+<% else %>
+<p>
+<strong>SSC GPA: </strong>
+<%= details.ssc_gpa %>
+</p>
+<% end %>
+
+<% if details.hsc_roll.blank? %>
+<% else %>
+<p>
+<strong>HSC Roll: </strong>
+<%= details.hsc_roll %>
+</p>
+<% end %>
+
+<% if details.hsc_gpa.blank? %>
+<% else %>
+<p>
+<strong>HSC GPA: </strong>
+<%= details.hsc_gpa %>
+</p>
+<% end %>
+
+<% if details.quota.blank? %>
+<% else %>
+<p>
+<strong>Quota: </strong>
+<%= details.quota %>
+</p>
+<% end %>
+-------- Result Details -------------
+<% if details.results_details.physics.blank? %>
+<% else %>
+<p>
+<strong>Physics: </strong>
+<%= details.results_details.physics %>
+</p>
+<% end %>
+
+<% if details.results_details.chemistry.blank? %>
+<% else %>
+<p>
+<strong>Chemistry: </strong>
+<%= details.results_details.chemistry %>
+</p>
+<% end %>
+
+<% if details.results_details.math.blank? %>
+<% else %>
+<p>
+<strong>Math: </strong>
+<%= details.results_details.math %>
+</p>
+<% end %>
+
+<% if details.results_details.biology.blank? %>
+<% else %>
+<p>
+<strong>Biology: </strong>
+<%= details.results_details.biology %>
+</p>
+<% end %>
+
+<% if details.results_details.ban_eng.blank? %>
+<% else %>
+<p>
+<strong>Bangla/English: </strong>
+<%= details.results_details.ban_eng %>
+</p>
+<% end %>
+
+<% if details.results_details.bangla.blank? %>
+<% else %>
+<p>
+<strong>Bangla : </strong>
+<%= details.results_details.bangla %>
+</p>
+<% end %>
+
+<% if details.results_details.english.blank? %>
+<% else %>
+<p>
+<strong>English : </strong>
+<%= details.results_details.english %>
+</p>
+<% end %>
+
+<% if details.results_details.analytical_ability.blank? %>
+<% else %>
+<p>
+<strong>Analytical Ability : </strong>
+<%= details.results_details.analytical_ability %>
+</p>
+<% end %>
+
+
+
+<% if details.results_details.general_knowledge.blank? %>
+<% else %>
+<p>
+<strong>General Knowledge : </strong>
+<%= details.results_details.general_knowledge %>
+</p>
+<% end %>
+
+<% if details.examinee.unit.blank? %>
+<% else %>
+<p>
+<strong>General Knowledge : </strong>
+<%= details.examinee.unit %>
+</p>
+<% end %>
+
+<% if details.examinee.roll_number.blank? %>
+<% else %>
+<p>
+<strong>Roll Number : </strong>
+<%= details.examinee.roll_number %>
+</p>
+<% end %>
+
+<% if details.result.marks.blank? %>
+<% else %>
+<p>
+<strong>Marks : </strong>
+<%= details.result.marks %>
+</p>
+<% end %>
+
+
+<% if details.result.merit.blank? %>
+<% else %>
+<p>
+<strong>Merit : </strong>
+<%= details.result.merit.to_i %>
+</p>
+<% end %>
+
+<% if details.result.list.blank? %>
+<% else %>
+<p>
+<strong>List : </strong>
+<%= details.result.list %>
+</p>
+<% end %>
+<% end %>
+
+</tr>
