@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unit: MyString
+  time: MyString
+  center: MyString
+  roll_start: 1
+  roll_end: 
+  total: 1
+
+two:
+  unit: MyString
+  time: MyString
+  center: MyString
+  roll_start: 1
+  roll_end: 
+  total: 1

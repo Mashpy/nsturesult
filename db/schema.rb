@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141221141329) do
+ActiveRecord::Schema.define(version: 20141222160735) do
 
   create_table "examinees", force: true do |t|
     t.string   "unit"
@@ -38,6 +38,17 @@ ActiveRecord::Schema.define(version: 20141221141329) do
   add_index "examinees_details", ["examinee_id"], name: "index_examinees_details_on_examinee_id", using: :btree
   add_index "examinees_details", ["result_id"], name: "index_examinees_details_on_result_id", using: :btree
   add_index "examinees_details", ["results_details_id"], name: "index_examinees_details_on_results_details_id", using: :btree
+
+  create_table "nstuseatplans", force: true do |t|
+    t.string   "unit"
+    t.string   "time"
+    t.string   "center"
+    t.integer  "roll_start"
+    t.integer  "roll_end"
+    t.integer  "total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "results", force: true do |t|
     t.float    "marks",      limit: 24

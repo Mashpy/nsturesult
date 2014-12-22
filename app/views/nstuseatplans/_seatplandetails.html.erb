@@ -6,18 +6,41 @@ Enter Admission Test Roll<br/>
 <%= submit_tag "Check", :class=>"btn-primary btn-success" ,:title => nil %>
 </div>  
 <% end %>
+
+<% @seatplan.each do |details| %>
 <hr>
-<% if params[:search].to_i.between?(1,10) %>
-<div style="text-align:center; color:red">Noakhali College</div>
-<% else if params[:search].to_i.between?(11,20)%>
-<div style="text-align:center; color:red">Noakhali Science & Technology University </div>
-<% else if params[:search].to_i.between?(21,30)%>
-<div style="text-align:center; color:red">Noakhali Mohila College </div>
-<% else if params[:search].to_i.between?(31,40)%>
-<div style="text-align:center; color:red">Noakhali Institute</div>
+<div class="row">  
+  
+<% if details.unit.blank? %>
 <% else %>
+<div class="">
+<b>Unit:</b>
+<%= details.unit %>
+</div>
+  
 <% end %>
+
+<% if details.time.blank? %>
+<% else %>
+<div class="">
+<b>Time:</b>
+<%= details.time %>
+</div>
 <% end %>
+
+  <% if details.center.blank? %>
+<% else %>
+<div class="">
+<b>Hall:</b>
+  <%= details.center %>
+</div>
+<% end %>    
+
+  <br/><b>Other Instuction</b><br/>
+আবেদনকৃত শিক্ষার্থীকে ভর্তি পরীক্ষার দিন HSC বা সমমান এর মূল রেজিস্ট্রেশন কার্ডের দুই কপি সত্যায়িত ফটোকপি এবং দুই কপি রঙিন পাসপোর্ট সাইজের সত্যায়িত ছবি, ছবির পেছনে পরীক্ষার্থীর নাম, SMS এর মাধ্যমে প্রাপ্ত রোল নম্বর বাংলা ও ইংরেজিতে লিখে উক্ত ছবি দ্ইুটির প্রত্যকটিকে পৃথকভাবে ফটোকপিকৃত রেজিস্ট্রেশন কার্ডের বাম দিকে উপরে স্টাপলার পিন দিয়ে সংযুুক্ত করে অবশ্যই সঙ্গে নিয়ে আসতে হবে। এগুলো ছাড়া কেউই ভর্তি পরীক্ষায় অংশগ্রহণ করতে পারবে না। রেজিস্ট্রেশন কার্ডের ফটোকপির উপরের অংশে উক্ত রোল নম্বর বাংলা ও ইংরেজিতে লিখতে হবে। বিশ্ববিদ্যালয় কর্তৃপক্ষ পরীক্ষার হলে পরীক্ষার্থী কর্তৃক আনিত HSC বা সমমান পরীক্ষার ফটোকপিকৃত (সত্যায়িত) দুইটি রেজিস্ট্রেশন কার্ডের একটি শিক্ষার্থীকে প্রবেশ পত্র হিসেবে প্রদান করবে। অন্যটি পরীক্ষার হলে জমা রাখা হবে এবং বিশ্ববিদ্যালয় কর্তৃপক্ষ তা সংরক্ষণ করবে।  <br/>
+# ES সিরিজের Calculator আনা যাবে না।<br/>
+# ভর্তি পরীক্ষায় নেগেটিভ মার্কিং নেই।<br/>
+</div>
 <% end %>
-<% end %>
+
 </div> 
