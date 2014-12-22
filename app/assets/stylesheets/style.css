@@ -513,3 +513,4 @@ input[type="color"]:focus,
   background-color: #eceff1;
 }
 b{font-weight:bold}
+.content {display:none;}
