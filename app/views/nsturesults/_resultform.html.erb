@@ -1,175 +1,198 @@
 <% @examineesdetails.each do |details| %>
 <hr>
+
+<% if details.result.merit.blank? %>
+<div style="color:red">Sorry, You are failed. Best of Luck </div>
+<% else %>
+<div class="text-align:center">
+Your merit position is: 
+<b style="color:green;"><%= details.result.merit.to_i %></b>
+
+<% end %>
+
+<% if details.result.list.blank? %>
+<% else %>
+
+and You are in the 
+<b style="color:green;"><%= details.result.list %></b>
+</div>
+<% end %>
+
+
+<br/>Examinees Details:<br/>
+<div class="row">  
+<% if details.examinee.unit.blank? %>
+<% else %>
+<div class="">
+<b>Unit : </b>
+<%= details.examinee.unit %>
+</div>
+<% end %>    
+
+<% if details.examinee.roll_number.blank? %>
+<% else %>
+<div class="">
+<b>Roll Number : </b>
+<%= details.examinee.roll_number %>
+</div>
+<% end %>  
+  
 <% if details.name.blank? %>
 <% else %>
-<p>
-<strong>Name: </strong>
+<div class="">
+<b>Name: </b>
 <%= details.name %>
-</p>
+</div>
 <% end %>
 
 <% if details.father_name.blank? %>
 <% else %>
-<p>
-<strong>Father's Name: </strong>
+<div class="">
+<b>Father's Name: </b>
 <%= details.father_name %>
-</p>
+</div>
 <% end %>
 
 <% if details.ssc_roll.blank? %>
 <% else %>
-<p>
-<strong>SSC Roll: </strong>
-<%= details.ssc_roll %>
-</p>
+<div class="">
+<b>SSC Roll: </b>
+<%= details.ssc_roll.to_i %>
+</div>
 <% end %>
 
 <% if details.ssc_gpa.blank? %>
 <% else %>
-<p>
-<strong>SSC GPA: </strong>
+<div class="">
+<b>SSC GPA:</b>
 <%= details.ssc_gpa %>
-</p>
+</div>
 <% end %>
 
 <% if details.hsc_roll.blank? %>
 <% else %>
-<p>
-<strong>HSC Roll: </strong>
-<%= details.hsc_roll %>
-</p>
+<div class="">
+<b>HSC Roll: </b>
+<%= details.hsc_roll.to_i %>
+</div>
 <% end %>
 
 <% if details.hsc_gpa.blank? %>
 <% else %>
-<p>
-<strong>HSC GPA: </strong>
+<div class="">
+<b>HSC GPA: </b>
 <%= details.hsc_gpa %>
-</p>
+</div>
 <% end %>
 
 <% if details.quota.blank? %>
 <% else %>
-<p>
-<strong>Quota: </strong>
+<div class="">
+<b>Quota: </b>
 <%= details.quota %>
-</p>
+</div>
 <% end %>
--------- Result Details -------------
+
 <% if details.results_details.physics.blank? %>
 <% else %>
-<p>
-<strong>Physics: </strong>
+<div class="">
+<b>Physics: </b>
 <%= details.results_details.physics %>
-</p>
+</div>
 <% end %>
 
 <% if details.results_details.chemistry.blank? %>
 <% else %>
-<p>
-<strong>Chemistry: </strong>
+<div class="">
+<b>Chemistry: </b>
 <%= details.results_details.chemistry %>
-</p>
+</div>
 <% end %>
 
 <% if details.results_details.math.blank? %>
 <% else %>
-<p>
-<strong>Math: </strong>
+<div class="">
+<b>Math: </b>
 <%= details.results_details.math %>
-</p>
+</div>
 <% end %>
 
 <% if details.results_details.biology.blank? %>
 <% else %>
-<p>
-<strong>Biology: </strong>
+<div class="">
+<b>Biology: </b>
 <%= details.results_details.biology %>
-</p>
+</div>
 <% end %>
 
 <% if details.results_details.ban_eng.blank? %>
 <% else %>
-<p>
-<strong>Bangla/English: </strong>
+<div class="">
+<b>Bangla/English: </b>
 <%= details.results_details.ban_eng %>
-</p>
+</div>
 <% end %>
 
 <% if details.results_details.bangla.blank? %>
 <% else %>
-<p>
-<strong>Bangla : </strong>
+<div class="">
+<b>Bangla : </b>
 <%= details.results_details.bangla %>
-</p>
+</div>
 <% end %>
 
 <% if details.results_details.english.blank? %>
 <% else %>
-<p>
-<strong>English : </strong>
+<div class="">
+<b>English : </b>
 <%= details.results_details.english %>
-</p>
+</div>
 <% end %>
 
 <% if details.results_details.analytical_ability.blank? %>
 <% else %>
-<p>
-<strong>Analytical Ability : </strong>
+<div class="">
+<b>Analytical Ability : </b>
 <%= details.results_details.analytical_ability %>
-</p>
+</div>
 <% end %>
 
 
 
 <% if details.results_details.general_knowledge.blank? %>
 <% else %>
-<p>
-<strong>General Knowledge : </strong>
+<div class="">
+<b>General Knowledge : </b>
 <%= details.results_details.general_knowledge %>
-</p>
-<% end %>
-
-<% if details.examinee.unit.blank? %>
-<% else %>
-<p>
-<strong>General Knowledge : </strong>
-<%= details.examinee.unit %>
-</p>
-<% end %>
-
-<% if details.examinee.roll_number.blank? %>
-<% else %>
-<p>
-<strong>Roll Number : </strong>
-<%= details.examinee.roll_number %>
-</p>
+</div>
 <% end %>
 
 <% if details.result.marks.blank? %>
 <% else %>
-<p>
-<strong>Marks : </strong>
+<div class="">
+<b>Marks : </b>
 <%= details.result.marks %>
-</p>
+</div>
 <% end %>
 
 
 <% if details.result.merit.blank? %>
 <% else %>
-<p>
-<strong>Merit : </strong>
+<div class="">
+<b>Merit : </b>
 <%= details.result.merit.to_i %>
-</p>
+</div>
 <% end %>
 
 <% if details.result.list.blank? %>
 <% else %>
-<p>
-<strong>List : </strong>
+<div class="">
+<b>List: </b>
 <%= details.result.list %>
-</p>
+</div>
 <% end %>
 <% end %>
 
 </tr>
+
+</div>
