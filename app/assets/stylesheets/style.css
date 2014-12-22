@@ -17,8 +17,8 @@ p
 
 h1, h2, h3, h4
 { font-size: 110%;
-  letter-spacing: .1em;
-  padding: 7px 0px 5px 0px; 
+  letter-spacing: .01em;
+  padding: 3px 0px 1px 0px; 
   margin: 0px 0px 12px 0px; 
   text-transform: uppercase;
   font-weight: normal;
@@ -120,17 +120,18 @@ h6 small {
 }
 
 .hero-unit {
-  padding: 60px;
-  margin-bottom: 30px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  color: inherit;
-  background-color: #eeeeee;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-	margin-left:360px;
+     padding: 60px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    color: inherit;
+    background-color: #eeeeee;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin-left:10%;
+    margin-right:10%;
 }
 
 hr {
@@ -140,7 +141,7 @@ hr {
   border-bottom: 1px solid #ffffff;
 }
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 100%;
 }
 .navbar-fixed-bottom .dropdown .caret {
   border-top: 0;
@@ -172,7 +173,7 @@ hr {
           border-radius: 0;
 }
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 100%;
 }
 .navbar-fixed-bottom {
   bottom: 0;
@@ -484,6 +485,8 @@ input[type="color"]:focus,
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  padding-bottom: 4px;
+  padding-top: 4px;
 }
 
 .btn-success:hover,

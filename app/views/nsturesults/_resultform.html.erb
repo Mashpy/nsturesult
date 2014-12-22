@@ -1,10 +1,5 @@
-<%= form_tag nsturesults_path, :method => 'get' do %>
-<%= text_field_tag :search, params[:search], class: "", placeholder: "Roll no." %>
-<%= submit_tag "Check", :class=>"btn btn-primary btn-success" ,:title => nil %>
-<% end %>
-
 <% @examineesdetails.each do |details| %>
-
+<hr>
 <% if details.name.blank? %>
 <% else %>
 <p>
